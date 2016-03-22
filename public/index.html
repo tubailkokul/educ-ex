@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Educ Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="./css/animate.min.css" rel="stylesheet">
+  <link href="./css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+
+  <script>
+      $(document).ready(function () {
+          $('.dropdown-toggle').dropdown();
+      });
+  </script>
+  <style>
+body {
+     margin: 0;
+     background: url('./img/blur-background09.jpg');
+     background-size: 1440px 900px;
+     background-repeat:no-repeat;
+    display: compact;
+     font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-top: 1cm;
+      margin-bottom: 1cm;
+      border-radius: 2cm;
+      background-color:	#9999FF;
+      color: blue;
+      padding:        5px 80px;
+      font-family:    Garamond;
+      font-size:      2em;
+    }
+.navbar .nav > li > a, .navbar .nav > li > a:first-letter {
+color:          lightgray;
+text-shadow:    none;
+}
+
+    .row.content {height: 450px}
+
+ .dropdown:hover .dropdown-menu {
+    </*  display: block;*/>
+      background-color:#6666CC
+
+    }
+    p  {
+        color: black;
+        font-family: Cursive;
+        font-size: 160%;
+    }
+    div.relative {
+        position: relative;
+        left: 30px;
+      /*  border: 3px solid #73AD21;*/
+    }
+
+  </style>
+</head>
+<body ng-app="myApp">
+  <link href="./css/animate.css" rel="stylesheet">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" data-hover="dropdown" data-animations="fadeInDown fadeInRight fadeInUp fadeInLeft">
+      <ul class="nav navbar-nav">
+       <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fichier</a>
+         <ul class="dropdown-menu dropdownhover-right">
+           <li><a href="#">Changer Imprimantes</a></li>
+           <li class = "divider"></li>
+           <li><a href="#">Quitter</a></li>
+         </ul>
+       </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Personnels</a>
+          <ul class="dropdown-menu dropdownhover-right">
+            <li><a href="#">Informations</a></li>
+            <li><a href="#">Pcie</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Elèves</a>
+          <ul class="dropdown-menu dropdownhover-right">
+            <li><a href="#">Changer Classes</a></li>
+            <li class="dropdown">
+              <a href="#">Listes</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Clubs</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Services</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Sms</a></li>
+        <li><a href="#">Outils</a></li>
+        <li><a href="#">Archives</a></li>
+        <li><a href="#">Maintien</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="relative"  ng-controller="ProfsCtrl">
+<p>Bonjour</p><br><br>
+<ul>
+  <li ng-repeat="x in myData">
+    {{ 'Vous avez ' + x.heures + ' heures de ' + x.Mat + ' , ' + x.jours + ' pour les classes ' + x.palier }}
+  </li>
+</ul>
+</div>
+
+<div class="relative" ng-controller="myCtrl">
+  <p>Vos Taches: </p>
+  <ul>
+    <li ng-repeat="x in products">{{x}}</li>
+  </ul>
+  <input ng-model="addMe">
+  <button ng-click="addItem()">Ajouter</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="./js/bootstrap-dropdownhover.min.js"></script>
+<script src="./js/profmatieres.js"></script>
+</body>
+</html>

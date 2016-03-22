@@ -1,0 +1,19 @@
+{
+  "name": "exercices",
+  "version": "1.0.0",
+  "description": "Educ exemple",
+  "main": "node server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "exercices"
+  ],
+  "author": "tuba",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4"
+  }
+}

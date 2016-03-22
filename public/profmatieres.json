@@ -1,0 +1,25 @@
+[   {
+	"id": 1,
+	      "Mat": "Matematiques",
+	      "heures": 3,
+        "jours" : "Lundi",
+        "palier" : "7"
+},     {
+	"id": 2,
+	      "Mat": "Matematiques",
+	      "heures": 5,
+        "jours" : "Lundi",
+        "palier" : "6"
+},     {
+	"id": 3,
+	      "Mat": "Fen ve Teknoloji",
+	      "heures": 2,
+	      "jours" : "Mardi",
+        "palier" : "6"
+},     {
+	"id": 4,
+	      "Mat": "Fen ve Teknoloji",
+	      "heures": 2,
+        "jours" : "Mardi",
+        "palier" : "7"
+}]
